@@ -1,0 +1,111 @@
+﻿Material,Constant
+air,1.01
+acetic acid,6.2
+alcohol ethyl (grain),24.55
+alcohol methyl (wood),32.7
+amber,2.8
+asbestos,4
+asphalt,2.6
+bakelite,4.8
+calcite,8
+calcium carbonate,8.7
+cellulose,3.7
+cellulose,7.5
+cement,2
+cocaine,3.1
+cotton,1.3
+diamond type I,5.87
+diamond type IIa,5.66
+ebonite,2.7
+epoxy,3.6
+flour,5
+flour,3
+freon 12 −150 °C (liquid),3.5
+freon 12 +20 °C (vapor),2.4
+germanium,16
+glass,4
+glass,7
+gutta percha,2.6
+jet fuel (jet a),1.7
+lead oxide,25.9
+lead sulfide (galena),200
+lead titanate,200
+lithium deuteride,14
+lucite,2.8
+mica muscovite,5.4
+mica canadian,6.9
+nylon,3.5
+oil linseed,3.4
+oil mineral,2.1
+oil olive,3.1
+oil petroleum,2
+oil petroleum,2.2
+oil silicone,2.5
+oil sperm,3.2
+oil transformer,2.2
+paper,3.3
+paper,3.5
+plexiglas,3.1
+polyester,3.2
+polyester,4.3
+polyethylene,2.26
+polypropylene,2.3
+polypropylene,2.2
+polystyrene,2.55
+polyvinyl chloride (pvc),4.5
+porcelain,6
+porcelain,8
+quartz crystalline (∥),4.6
+quartz crystalline (⊥),4.51
+quartz fused,3.8
+rubber butyl,2.4
+rubber neoprene,6.6
+rubber silicone,3.2
+rubber vulcanized,2.9
+salt,5.9
+selenium,6
+silicon,11.8
+silicon carbide (αSiC),10.2
+silicon dioxide,4.5
+silicone oil,2.7
+silicone oil,2.8
+soil,10
+soil,20
+sulfur,3.7
+tantalum pentoxide,27
+teflon,2.1
+tin antimonide,147
+titanium dioxide (rutile),114
+tobacco,1.6
+tobacco,1.7
+uranium dioxide,24
+vacuum,1
+water ice −30 °C,99
+water liquid 0 °C,87.9
+water liquid 20 °C,80.2
+water liquid 40 °C,73.2
+water liquid 60 °C,66.7
+water liquid 80 °C,60.9
+water liquid 100 °C,55.5
+wax beeswax,2.7
+wax beeswax,3
+wax carnuba,2.9
+wax paraffin,2.1
+wax paraffin,2.5
+waxed paper,3.7
+eye aqueous humor,67
+eye cornea,61
+eye sclera,67
+fat,16
+muscle smooth,56
+muscle striated,58
+skin,33
+skin,44
+tongue,38
+bone cancellous,26
+bone cortical,14.5
+brain gray matter,56
+brain white matter,43
+brain meninges,58
+cartilage general,22
+cartilage ear,47
