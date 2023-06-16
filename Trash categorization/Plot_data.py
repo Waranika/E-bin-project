@@ -32,8 +32,8 @@ print(frame.sample(50))
 
 pp.scatter(frame['Constant'], frame['label'])
 
-frame['Constant'] = str(frame['Constant'])
-frame['label'] = frame['label']
+#frame['Constant'] = str(frame['Constant'])
+
 #pp.show()
 
 #Create new CSV file
@@ -51,17 +51,29 @@ from sklearn.pipeline import Pipeline
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.linear_model import SGDClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 
 #Turn the files into Bunchs with respect to each columns
 frame = Bunch(data = frame["Constant"].fillna('').to_list(), target=frame["label"].fillna('').to_list())
 #print(frame.target)
 #print(frame.data)
 
+frame.data = np.vstack((frame.data, np.zeros_like(frame.data))).T
+print(frame.data)
+
+# Create and train the RandomForestClassifier
+clf = RandomForestClassifier()
+clf.fit(frame.data, frame.target)
+
 #Naive Bayers Test
-text_clf2 = Pipeline([('vect', CountVectorizer()),('tfidf', TfidfTransformer()),('clf', MultinomialNB()),])
-text_clf2 = text_clf2.fit(frame.data, frame.target)
+#text_clf2 = Pipeline([('vect', CountVectorizer()),('tfidf', TfidfTransformer()),('clf', MultinomialNB()),])
+#text_clf2 = text_clf2.fit(frame.data, frame.target)
 
-To_predict = ['100']
+To_predict = [[25, 0]]
 
-predicted = text_clf2.predict(To_predict)
-print (predicted)
+predicted = clf.predict(To_predict)
+#accuracy = clf.score(frame.data, frame.target)
+print(predicted)
+
+#predicted = text_clf2.predict(To_predict)
+#print (predicted)
