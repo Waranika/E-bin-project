@@ -17,7 +17,8 @@ Follow this [link](https://cdn.hackaday.io/files/1901528135463168/Hackaday%20Pri
 - **Elijah Ki-Zerbo**
 - **Théotime Perrichet**
 
-### Table of contents 
+### Table of contents
+
 - [E-bin](#e-bin)
   - [Challenge 3: Green Hacks](#challenge-3-green-hacks)
     - [Challenge](#challenge)
@@ -35,8 +36,4 @@ The project is divided into two parts:
 - The first part is the creation of a smart trash can that can detect the type of waste thrown in it.
 - The second part is the creation of a machine learning model that can detect the type of waste from it dielectric value.
 
-
 ### 3D Model
-
-
-
