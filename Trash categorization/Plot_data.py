@@ -1,38 +1,56 @@
 import matplotlib.pyplot as plt
+import os
 from sklearn.datasets import make_blobs
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as pp
 
-frame = pd.read_csv(r"C:\Users\kizer\E-bin project\Data\Data.csv", sep=",", encoding="utf-8")
+from sklearn.utils import Bunch
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import SGDClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 
 
-print(frame)
-frame.info() 
-#frame.plot
+###############################################"
+# Importing data and adding label section through clustering
+############################################### "
 
+frame = pd.read_csv(r"C:\Users\kizer\E-bin project\Data\Data.csv", sep=",", encoding="utf-8") 
+#print(frame)
+#frame.info() 
 
-val = 0. # this is the value where you want the data to appear on the y-axis.
-ar = frame['Constant'] # just as an example array
-#pp.plot(ar, np.zeros_like(ar) + val, 'x')
-#pp.show()
-
+#Apply K-means method for clustering
 from sklearn.cluster import KMeans
-
 km = KMeans(
-    n_clusters=5, tol=0.01
+    n_clusters=3, tol=0.01 
 )
-
 frame["label"] = km.fit_predict(frame[['Constant']])
+
+#Show a sample of 50 constants with their labels
 print(frame.sample(50))
 
+#Plot with Matplotlib the dielectric constants versus their labels
 pp.scatter(frame['Constant'], frame['label'])
 pp.show()
+#frame.to_csv("C:\\Users\\kizer\\E-bin project\\Trash categorization\\frame.csv")
 
+###############################################"
+# Model training section
+############################################"
 
-#ax = frame[frame['label']==0].plot.scatter(x='Constant', y='label', s=50, color='white', edgecolor='black')
+#Turn the files into Bunchs with respect to each columns
+frame = Bunch(data = frame["Constant"].fillna('').to_list(), target=frame["label"].fillna('').to_list())
+frame.data = np.vstack((frame.data, np.zeros_like(frame.data))).T
+print(frame.data)
 
-#frame[frame['label']==1].plot.scatter(x='Constant', y='label', s=50, color='white', ax=ax, edgecolor='red')
+# Create and train the RandomForestClassifier
+clf = RandomForestClassifier()
+clf.fit(frame.data, frame.target)
 
-
-#plt.scatter(km.cluster_centers_.ravel(), [0.5]*len(km.cluster_centers_), s=100, color='green', marker='*')
+#Variable to test
+To_predict = [[250, 0]]
+predicted = clf.predict(To_predict) 
+print(predicted)
