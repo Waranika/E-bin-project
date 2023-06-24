@@ -1,5 +1,5 @@
 # E-bin
-
+[https://hackaday.io/project/191573-masterwaste-a-smart-waste-system](https://hackaday.io/project/191573-masterwaste-a-smart-waste-management-system)
 ## [Challenge 3: Green Hacks](https://hackaday.io/contest/190152-supplyframe-designlab-2023-hackaday-prize/log/216917-challenge-3-green-hacks)
 
 ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) 
@@ -17,7 +17,8 @@ Follow this [link](https://cdn.hackaday.io/files/1901528135463168/Hackaday%20Pri
 - **Elijah Ki-Zerbo**
 - **Théotime Perrichet**
 
-### Table of contents 
+### Table of contents
+
 - [E-bin](#e-bin)
   - [Challenge 3: Green Hacks](#challenge-3-green-hacks)
     - [Challenge](#challenge)
@@ -35,8 +36,4 @@ The project is divided into two parts:
 - The first part is the creation of a smart trash can that can detect the type of waste thrown in it.
 - The second part is the creation of a machine learning model that can detect the type of waste from it dielectric value.
 
-
 ### 3D Model
-
-
-
