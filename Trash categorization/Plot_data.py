@@ -34,7 +34,7 @@ print(frame.sample(50))
 
 #Plot with Matplotlib the dielectric constants versus their labels
 pp.scatter(frame['Constant'], frame['label'])
-pp.show()
+#pp.show()
 #frame.to_csv("C:\\Users\\kizer\\E-bin project\\Trash categorization\\frame.csv")
 
 ###############################################"
@@ -51,6 +51,6 @@ clf = RandomForestClassifier()
 clf.fit(frame.data, frame.target)
 
 #Variable to test
-To_predict = [[250, 0]]
+To_predict = [[200, 0]]
 predicted = clf.predict(To_predict) 
 print(predicted)
